@@ -1,0 +1,40 @@
+{
+  "name": "linkify",
+  "version": "0.1.0",
+  "description": "Rewrites assistant replies so file paths, URLs and issue keys render as markdown links",
+  "author": {
+    "name": "Alexander Chernov"
+  },
+  "homepage": "https://github.com/alekc/agent-linkify",
+  "repository": "https://github.com/alekc/agent-linkify",
+  "license": "MIT",
+  "userConfig": {
+    "modelResolve": {
+      "type": "boolean",
+      "title": "Hidden model call",
+      "description": "Ask the model, in a hidden cached request, which URL a PR, repo or unknown issue key refers to. /linkify model on|off overrides it.",
+      "default": false
+    },
+    "trackers": {
+      "type": "string",
+      "multiple": true,
+      "title": "Tracker links",
+      "description": "One PREFIX=URL row per tracker, {key} standing for the whole key, e.g. ABC=https://linear.app/<workspace>/issue/{key}",
+      "default": []
+    },
+    "modes": {
+      "type": "string",
+      "multiple": true,
+      "title": "Rule modes",
+      "description": "One rule=fix|flag|off row per override, e.g. dash=fix. Rule ids are in the README.",
+      "default": []
+    },
+    "hosts": {
+      "type": "string",
+      "multiple": true,
+      "title": "Extra link hosts",
+      "description": "Hosts a model-supplied URL may point at, beyond github.com, gitlab.com, linear.app and atlassian.net",
+      "default": []
+    }
+  }
+}

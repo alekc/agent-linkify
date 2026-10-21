@@ -1,0 +1,12 @@
+{
+  "name": "agent-linkify",
+  "owner": { "name": "Alexander Chernov" },
+  "description": "linkify: markdown links for paths, URLs and issue keys in coding-agent replies",
+  "plugins": [
+    {
+      "name": "linkify",
+      "source": "./",
+      "description": "Rewrites assistant replies so file paths, URLs and issue keys render as markdown links"
+    }
+  ]
+}

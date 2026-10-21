@@ -1,0 +1,9 @@
+{
+  "name": "linkify",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node --test core/linkify.spec.ts opencode/linkify.spec.ts"
+  }
+}
